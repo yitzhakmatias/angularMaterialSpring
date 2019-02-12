@@ -1,0 +1,30 @@
+<section fxLayout="column" fxLayoutAlign="center center">
+  <form fxLayoutGap="10px" #f="ngForm" (ngSubmit)="obSubmit(f)"
+        [formGroup]="noteForm" novalidate>
+    <mat-card fxFlex.xs="100%" fxFlex="700px">
+      <mat-card-title fxLayoutalign="center"> Add new Task</mat-card-title>
+      <mat-card-content fxLayoutalign="center">
+        <mat-form-field>
+          <input type="text" matInput placeholder="Name" ngModel name="nameIn" formControlName="name" required
+                 autofocus>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text" matInput placeholder="Category" ngModel name="categoryIn" formControlName="category">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Updated At" ngModel name="updatedAt"
+                 formControlName="registerDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+      </mat-card-content>
+      <mat-card-actions fxLayoutalign="center">
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+        <button type="submit" mat-raised-button color="accent" [routerLink]="['/listTasks']">Back</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </form>
+</section>
