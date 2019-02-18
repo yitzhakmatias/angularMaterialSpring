@@ -9,7 +9,7 @@
                  autofocus>
         </mat-form-field>
         <mat-form-field>
-          <input type="text" matInput placeholder="Category" ngModel name="categoryIn" formControlName="category">
+          <input type="text" matInput placeholder="Note" ngModel name="categoryIn" formControlName="note">
         </mat-form-field>
         <mat-form-field>
           <input matInput [matDatepicker]="picker" placeholder="Updated At" ngModel name="updatedAt"
@@ -22,7 +22,7 @@
       </mat-card-content>
       <mat-card-actions fxLayoutalign="center">
         <button type="submit" mat-raised-button color="primary">Submit</button>
-        <button type="submit" mat-raised-button color="accent" [routerLink]="['/listTasks']">Back</button>
+        <button type="submit" mat-raised-button color="accent" [routerLink]="['/taskList']">Back</button>
       </mat-card-actions>
     </mat-card>
 

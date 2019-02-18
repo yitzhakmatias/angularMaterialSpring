@@ -22,6 +22,7 @@ export class EditComponent implements OnInit {
       id: new FormControl(''),
       name: new FormControl('', Validators.required),
       category: new FormControl('', Validators.required),
+      note: new FormControl('', Validators.required),
       state: new FormControl(''),
       registerDate: new FormControl('', Validators.required),
     });
@@ -42,7 +43,7 @@ export class EditComponent implements OnInit {
       this.service.createTask(this.noteForm.value).subscribe(
         data => {
           this.noteForm.reset();
-          this.router.navigate(['/listTasks']);
+          this.router.navigate(['/taskList']);
         },
         error => {
           return Observable.throw(error)

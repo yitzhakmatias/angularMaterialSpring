@@ -19,7 +19,7 @@ export class TaskListComponent implements OnInit {
   dataSource: Observable<any>;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name', 'category', 'registerDate', "actions"];
+  displayedColumns = ['id', 'name', 'note', 'registerDate', "actions"];
 
   constructor(private service: TaskService, private  router: Router) {
 

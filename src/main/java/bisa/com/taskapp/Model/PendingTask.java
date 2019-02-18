@@ -14,6 +14,7 @@ public class PendingTask {
     private Long id;
 
     private String name;
+    private String note;
     private Date registerDate;
     private String category;
     private String state;
@@ -57,5 +58,13 @@ public class PendingTask {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
     }
 }

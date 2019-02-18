@@ -1,1 +1,29 @@
-<app-task-list></app-task-list>
+<div class="container">
+  <button [routerLink]="['/note',0,'add']">new</button>
+</div>
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th> name</th>
+      <th>note</th>
+      <th class="text-right">Registered Date</th>
+      <th class="text-right"></th>
+    </tr>
+    <tr *ngFor="let note of tasks | async">
+      <td>
+        <a [routerLink]="['/note',note.id]">{{note.name}}</a>
+
+      </td>
+      <td>
+        {{note.note}}
+      </td>
+
+      <td class="text-right">
+        {{note.registerDate}}
+      </td>
+      <td>
+        <button [routerLink]="['/note',note.id,'edit']">Edit</button>
+      </td>
+    </tr>
+  </table>
+</div>
