@@ -39,7 +39,11 @@ export class FireTaskListService {
  });*/
   }
 
-  addTask(task, any) {
-    this.db.collection('pendingTask').add(task);
+  addTask(task) {
+    return this.db.collection('pendingTask').add(task);
+  }
+
+  delete(id: any) {
+    
   }
 }

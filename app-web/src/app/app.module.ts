@@ -38,7 +38,9 @@ import {AngularFireModule} from "@angular/fire";
 import {environment} from "../environments/environment";
 import {AngularFirestore, AngularFirestoreModule} from "@angular/fire/firestore";
 
-import { MatTableListComponent } from './components/mat-table-list/mat-table-list.component';
+import {MatTableListComponent} from './components/mat-table-list/mat-table-list.component';
+import {FireEditTaskComponent} from "./components/fire-edit-task/fire-edit-task.component";
+
 
 const modules = [
   MatButtonModule,
@@ -52,11 +54,12 @@ const modules = [
   MatOptionModule,
   MatSlideToggleModule
 ];
-const fireBase=[
+const fireBase = [
   AngularFireModule.initializeApp(environment.firebase),
   AngularFirestoreModule,
 
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,8 +68,10 @@ const fireBase=[
     EditComponent,
     DashboardComponent,
     TaskListComponent,
-
+    FireEditTaskComponent,
     MatTableListComponent
+
+
   ],
   imports: [
     BrowserModule,

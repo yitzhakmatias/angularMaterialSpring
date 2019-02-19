@@ -7,6 +7,7 @@ import {DashboardComponent} from "./components/dashboard/dashboard.component";
 import {TaskListComponent} from "./components/task-list/task-list.component";
 
 import {MatTableListComponent} from "./components/mat-table-list/mat-table-list.component";
+import {FireEditTaskComponent} from "./components/fire-edit-task/fire-edit-task.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'listTasks', component: ListComponent},
   {path: 'mTaskList', component: MatTableListComponent},
   {path: 'editTasks/:id', component: EditComponent},
+  {path: 'fireEditTasks/:id', component: FireEditTaskComponent},
 
 
 ];
